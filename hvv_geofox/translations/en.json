@@ -1,0 +1,33 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "HVV Geofox einrichten",
+        "data": {
+          "username": "Benutzername (GTI API)",
+          "password": "Passwort (GTI API)",
+          "stations_raw": "Haltestellen\n(Format: Name: StationsID  oder  Name: StationsID: FußwegMinuten)",
+          "routes_raw": "Routen (optional)\n(Format: origin_id/Name > dest_id/Name  oder mit : FußwegMinuten)",
+          "poll_interval": "Abfrageintervall in Sekunden (2–30)",
+          "walk_offset": "Globaler Fußweg-Offset in Minuten (0–60)"
+        }
+      }
+    },
+    "error": {
+      "no_stations": "Mindestens eine Haltestelle muss angegeben werden."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "HVV Geofox Einstellungen",
+        "data": {
+          "stations_raw": "Haltestellen",
+          "routes_raw": "Routen (optional)",
+          "poll_interval": "Abfrageintervall in Sekunden (2–30)",
+          "walk_offset": "Globaler Fußweg-Offset in Minuten (0–60)"
+        }
+      }
+    }
+  }
+}
