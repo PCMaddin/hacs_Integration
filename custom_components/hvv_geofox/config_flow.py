@@ -11,7 +11,6 @@ import time
 from datetime import datetime, timedelta
 
 import aiohttp
-import async_timeout
 
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.const import Platform
@@ -96,7 +95,7 @@ async def _throttled_post(
             await asyncio.sleep(wait)
 
         try:
-            async with async_timeout.timeout(15):
+            async with asyncio.timeout(15):
                 async with session.post(url, data=body, headers=headers) as resp:
                     resp.raise_for_status()
                     result = await resp.json(content_type=None)
